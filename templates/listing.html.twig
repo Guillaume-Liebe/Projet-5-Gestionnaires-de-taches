@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des tâches
+{% endblock %}
+
+{% block body %}
+    <h1>Listes des tâches</h1>
+    <div class="col-md-3 offset-md-2 left-column mb-1">
+        <ul class="list-group">
+            {% for listing in listings %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{{ path('listing_show', {'listingId' : listing.id }) }}">
+                        {{ listing.name }}
+                    </a>
+                </li>
+            {% endfor %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <form method="post" action="{{ path('listing_create') }}">
+                    <div class="input-group">
+                        <input type="text" placeholder="Ajouter une liste" class="form-control input-block-level" name="name" />
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="submit">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-7 list mb-1">
+        {% if currentListing %}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+                <a class="navbar-brand" href="#">{{ currentListing.name }}</a>
+                <div>
+                    <form class="form-inline">
+                        <a href="{{ path('task_create', {'listingId' : currentListing.id}) }}">
+                            <button class="btn btn-outline-primary" type="button">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </a>&nbsp
+                        <a href="{{ path('listing_delete', {'listingId' : currentListing.id}) }}">
+                            <button class="btn btn-outline-danger" type="button">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </a>
+                    </form>
+                </div>
+            </nav>
+            <div>
+                {% if currentListing.tasks | length %}
+                    <table class="table table-striped">
+                        {% for task in currentListing.tasks %}
+                            <tr> 
+                                <td class="name_taches">
+                                    <a href="#">{{ task.name }}</a>
+                                </td>
+                                <td class="icons">
+                                    <a href="{{ path('task_edit', {'listingId' : currentListing.id, 'taskId': task.id }) }}">
+                                        <i class="fa fa-edit"></i>
+                                    </a>&nbsp&nbsp
+                                    <a href="{{ path('task_delete', {'listingId' : currentListing.id, 'taskId': task.id }) }}">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% else %} 
+                    <h5 class="pt-3" style color"red">Pas de tâche existante</h5>
+                    <p class="pt-3">
+                        Vous pouvez créer une nouvelle tâche en cliquant sur le bouton <i class="fa fa-plus"></i>
+                    </p>
+                {% endif %}
+            </div>
+            {% else %}   
+            <h5 class="pt-3">Pas de liste existante</h5>
+            <p class="pt-3">
+                Vous pouvez créer une nouvelle liste en tapant son nom puis Entrée, ou en cliquant sur le bouton <i class"fa fa-plus"></i>
+            </p>
+         {% endif %}
+    </div>
+{% endblock %}

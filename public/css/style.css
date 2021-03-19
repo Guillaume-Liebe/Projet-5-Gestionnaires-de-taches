@@ -1,0 +1,400 @@
+body
+{
+    background: linear-gradient(#3f8cb5, #405fb5,#091035);
+    background-repeat: no-repeat;
+}
+
+/*Container qui contient tous les élements*/
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+{
+    background: linear-gradient(175deg, #ffffff,#008bce4d);
+    margin-top: -60px;
+    margin-bottom: 350px;
+    padding-bottom: 100px;
+    border-radius: 15px;
+    box-shadow: 4px 5px 20px 0px;
+}
+
+/*Titre de niveau I*/
+h1
+{
+    color: #212121;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/*Titre de niveau II*/
+h2
+{
+    color: #212121;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/*Bouton plus */
+.input-group .btn 
+{
+    margin-top: 20px;
+    width: 120%;
+    height: 70%;
+}
+
+/*Liens des textes*/
+a 
+{
+    color: #ffffff;
+    font-size: 23px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+li a 
+{
+    letter-spacing: 1px;
+    padding-left: 40px;
+    padding-right: 210px;
+    margin-left: -20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+/*Textes pas de tâches existante*/
+.pt-3 
+{
+    margin-left: 40px;
+}
+
+a:hover
+{
+    color: #ffffff;
+    font-weight: normal;
+}
+
+/*Cadre liste des tâches*/
+.list-group-item 
+{
+    padding: 1rem 1rem;
+}
+
+.list-group-item:hover 
+{
+    background-color: rgb(51 51 51);
+}
+
+.justify-content-between 
+{
+    background-color: rgb(33 33 33);
+}
+
+.list-group-item:first-child 
+{
+    border-top-right-radius: 0;
+}
+
+.row 
+{
+    --bs-gutter-x: 0;
+}
+
+/*Titres de tâches + ajouter + supprimer*/
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover 
+{
+    cursor: unset;
+    font-weight: bold;
+}
+
+/*Icones Editer*/
+.fa-edit 
+{
+    color:#4ac3a7;
+}
+
+/*Icones supprimer*/
+.icons .fa-trash
+{
+    color:#dc3545;
+}
+
+.navbar-brand 
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(33 33 33);
+}
+
+/*Cadre des titres de tâches + ajouter + supprimer*/
+.bg-light 
+{
+    background-color: rgb(255 255 255 / 90%)!important;
+    padding: 15px;
+    border-top-right-radius: 5px;
+}
+
+.navbar-light .navbar-brand 
+{
+    color: rgb(33 33 33);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 32px;
+}
+
+/*Lignes noir entre chaque colonnes*/
+.table 
+{
+    border-color: #212529;
+}
+
+/*Cadre des tâches + ajouter + supprimer*/
+.table>:not(caption)>*>* 
+{
+    padding: 1rem .5rem;
+    padding-right: 30px;
+    box-shadow: inset 0 0 0 9999px rgb(0 0 0 / 61%);
+}
+
+/*Noms des tâches*/
+.name_taches a
+{
+    margin-left: 40px;
+    cursor: unset;
+}
+
+tr:hover 
+{
+    background-color: rgb(153, 153, 153);
+}
+
+/*Ligne tableau*/
+td
+{
+    padding-right: 450px;
+}
+
+form 
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Formulaire modifier*/
+.form-control 
+{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/*Textes formulaire */
+.col-form-label 
+{
+    padding-top: calc(.37rem + 25px);
+    text-align: right;
+}
+
+#task_Sauvegarder
+{
+    margin-top: 25px;
+    margin-left: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: auto;
+    margin-bottom: 200px;
+    display: flex;
+    
+}
+
+.alert-success, .alert-warning 
+{
+    margin-top: 25px;
+}
+
+/*Icones éditer et supprimer*/
+.icons
+{
+    text-align: end;
+}
+
+/*Page éditer liste de tâches*/
+#task 
+{
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.row .form-group  
+{
+    display: flex;
+    flex-direction: column;
+}
+.form-group .col-form-label
+{
+    padding-top: 0;
+    text-align: start;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-group .form-control
+{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.col-sm-2 
+{
+    width: 100%;
+}
+
+.col-sm-10 
+{
+    width: 100%;
+}
+
+.btn-primary 
+{
+    background-color: #4e0dfd;
+    border-color: #4e0dfd;
+}
+
+#task_description, #task_dueDate, #task_reminder
+{
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1024px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+    {
+        max-width: 950px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .offset-md-2 
+    {
+        margin-left: 9%;
+    }
+
+    /*Rubriques menu*/
+    li a 
+    {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .offset-md-2 
+    {
+        margin-left: 0;
+    }
+
+    .col-md-3 
+    {
+        width: 100%;
+    }
+
+    .col-md-7 
+    {
+        width: 100%;
+    }
+
+    .list-group-item 
+    {
+        border: 1px solid rgb(117 117 117 / 13%);
+    }
+
+    .list-group-item:first-child 
+    {
+        border-top-right-radius: inherit;
+    }
+
+    .bg-light 
+    {
+        border-top-left-radius: 5px;
+    }
+
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+    {
+        max-width: 700px;
+    }
+
+    li a 
+    {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .list-group 
+    {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .table>:not(caption)>*>* 
+    {
+        padding-right: 0;
+    }
+
+    .icons 
+    {
+        text-align: start;
+    }
+
+    .name_taches a 
+    {
+        margin-left: 0px;
+    }
+
+    /*Page éditer liste de tâches*/
+    #task 
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 425px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+    {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 375px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+    {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 320px)
+{
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl 
+    {
+        max-width: 300px;
+    }
+}
